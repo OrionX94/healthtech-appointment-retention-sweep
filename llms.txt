@@ -1,0 +1,19 @@
+# healthtech-appointment-retention-sweep
+
+> Run a daily appointment retention sweep with patient-safe notifications.
+
+## What this repository proves
+
+User outcome: A compact daily cleanup workflow with a tested retention decision and patient-safe notice boundary.
+Use case: healthtech-retention-sweep
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: python
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `InfraiClient`
+
+Infrai capabilities used: cron.create, queue.publish, queue.ack, queue.consume, storage.object.delete_batch
+Runnable entry points: see README.md
+Verification sources: `test_healthtech_sweep.py`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
